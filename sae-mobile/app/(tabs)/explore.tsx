@@ -86,6 +86,11 @@ export default function ExploreScreen() {
           <Text style={styles.fieldHint}>Titre de la SAé</Text>
           <TextInput style={styles.input} value={formData.titre} onChangeText={(t) => handleChange('titre', t)} placeholder="Ex: Développement d'une application" placeholderTextColor="#999" />
           
+          {/* ---> NOUVEAU CHAMP AJOUTÉ ICI <--- */}
+          <Text style={styles.fieldHint}>Élève (Ressources Humaines)</Text>
+          <TextInput style={styles.input} value={formData.ressourcesHumaines} onChangeText={(t) => handleChange('ressourcesHumaines', t)} placeholder="Ex: Zenati Mehdi" placeholderTextColor="#999" />
+          {/* ---------------------------------- */}
+
           <Text style={styles.fieldHint}>Domaine (Web, Design, Comm...)</Text>
           <TextInput style={styles.input} value={formData.domaine} onChangeText={(t) => handleChange('domaine', t)} placeholder="Ex: Développement Web" placeholderTextColor="#999" />
 

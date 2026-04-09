@@ -48,6 +48,12 @@ const AnimatedCard = ({ item, index }: { item: any, index: number }) => {
           
           <Text style={styles.cardTitle}>{item.titre}</Text>
           
+          {/* --- NOUVEAU : AFFICHAGE DU NOM DE L'ÉLÈVE --- */}
+          {item.ressourcesHumaines ? (
+            <Text style={styles.studentName}> {item.ressourcesHumaines}</Text>
+          ) : null}
+          {/* ------------------------------------------- */}
+
           {/* DESCRIPTION RENDUE BIEN VISIBLE */}
           <Text style={styles.cardDescription} numberOfLines={3}>
             {item.description || "Aucune description fournie pour ce projet. Modifiez la SAé pour en ajouter une."}
@@ -225,7 +231,14 @@ const styles = StyleSheet.create({
   semestreBadge: { backgroundColor: '#F2F2F7', color: '#636366', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 8, fontSize: 11, fontWeight: '800' },
   cardTitle: { fontSize: 22, fontWeight: '800', color: '#1C1C1E', marginBottom: 8 },
   
-  // --- NOUVEAU STYLE DESCRIPTION ---
+  // --- NOUVEAU STYLE POUR LE NOM DE L'ÉLÈVE ---
+  studentName: { 
+    fontSize: 14, 
+    fontWeight: '600', 
+    color: '#636366', 
+    marginBottom: 10 
+  },
+  
   cardDescription: { 
     fontSize: 15, 
     color: '#48484A', 
